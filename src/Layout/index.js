@@ -1,7 +1,8 @@
 import Header from "./Header";
 import NotFound from "./NotFound";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
-import Home from "./Home"
+import Home from "./Home";
+import CreateDeck from "./Deck/CreateDeck";
 
 
 function Layout() {
@@ -16,6 +17,9 @@ function Layout() {
             <Home />
           </Route>
 
+          <Route path="/decks/new">
+            <CreateDeck />
+          </Route>
 
 
           <Route>
