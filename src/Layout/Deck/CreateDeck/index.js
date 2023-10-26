@@ -23,12 +23,18 @@ function CreateDeck() {
     return (
         <>
             <nav aria-label="breadcrumb">
-                <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                <li className="breadcrumb-item">Create Deck</li>
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+                    <li className="breadcrumb-item">Create Deck</li>
+                </ol>
             </nav>
             <form onSubmit={submitFormHandle}>
+                <label>Name</label>
                 <input type="text" name="name" onChange={changeHandle} id="name" className="form-control" placeholder="Deck Name" value={deck.name} />
-                <textarea name="description" id="description" className="form-control" placeholder="Breif description of the deck" value={deck.description} />
+                <label>Description</label>
+                <textarea rows="4" name="description" onChange={changeHandle} id="description" className="form-control" placeholder="Breif description of the deck" value={deck.description} />
+                <Link to="/" className="btn btn-secondary">Cancel</Link>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </>
     )
