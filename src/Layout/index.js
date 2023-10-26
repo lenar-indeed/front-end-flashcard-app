@@ -5,6 +5,7 @@ import Home from "./Home";
 import CreateDeck from "./Deck/CreateDeck";
 import DeckView from "./Deck/DeckView";
 import Study from "./Study";
+import EditDeck from "./Deck/EditDeck";
 
 
 function Layout() {
@@ -24,10 +25,12 @@ function Layout() {
           <Route exact path="/decks/:deckId">
             <DeckView />
           </Route>
-          <Route exact path="/decks/:deckId/study">
+          <Route path="/decks/:deckId/study">
             <Study />
           </Route>
-
+          <Route path="/decks/:deckId/edit">
+            <EditDeck />
+          </Route>
           <Route>
             <NotFound />
           </Route>
