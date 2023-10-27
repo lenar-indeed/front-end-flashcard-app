@@ -14,7 +14,7 @@ function Home () {
         }
         getDecks();
         return () => abortController.abort();
-    }, [decks]);
+    }, []);
     const deckCards = decks.map((deck) => <DeckCard deck={deck} key={deck.id} />);
 
     return (
