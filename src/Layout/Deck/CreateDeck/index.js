@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {createDeck} from "../../../utils/api";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 function CreateDeck() {
@@ -31,10 +31,10 @@ function CreateDeck() {
             <form onSubmit={submitFormHandle}>
                 <label>Name</label>
                 <input type="text" name="name" onChange={changeHandle} id="name" className="form-control" placeholder="Deck Name" value={deck.name} />
-                <label>Description</label>
+                <label className="mt-2">Description</label>
                 <textarea rows="4" name="description" onChange={changeHandle} id="description" className="form-control" placeholder="Breif description of the deck" value={deck.description} />
-                <Link to="/" className="btn btn-secondary">Cancel</Link>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <Link to="/" className="btn btn-secondary mr-2 mt-3">Cancel</Link>
+                <button type="submit" className="btn btn-primary mt-3">Submit</button>
             </form>
         </>
     )

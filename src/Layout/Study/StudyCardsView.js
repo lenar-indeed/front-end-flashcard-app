@@ -22,14 +22,13 @@ function StudyCardsView({cards}) {
             setFlipped(false);
         }
     }
-
     return (
         <div className="card">
             <div className="card-body">
                 <h4 className="card-title">Card {cardCount} of {cards.length}</h4>
                 <p className="card-text">{flipped ? card.back : card.front}</p>
-                <button onClick={flipHandle} className="btn btn-secondary">Flip</button>
-                <button onClick={nextHandle} className="btn btn-primary">Next</button>
+                <button onClick={flipHandle} className="btn btn-secondary mr-2">Flip</button>
+                {flipped ? (<button onClick={nextHandle} className="btn btn-primary">Next</button>) : ""} 
             </div>
         </div>
     )

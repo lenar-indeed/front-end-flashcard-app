@@ -19,7 +19,7 @@ function Home () {
 
     return (
         <>
-            <Link className="btn btn-primary" to={"/decks/new"}>Create Deck</Link>
+            <Link className="btn btn-primary mb-2" to={"/decks/new"}>Create Deck</Link>
             <div>
                 {deckCards}
             </div>

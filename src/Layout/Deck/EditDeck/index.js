@@ -45,8 +45,8 @@ function EditDeck() {
                 <input type="text" className="form-control" placeholder={deck.name} name="name" id="name" value={deck.name} onChange={changeHandler} />
                 <label>Description</label>
                 <textarea rows={5} className="form-control" placeholder={deck.description} name="description" id="description" value={deck.description} onChange={changeHandler} />
-                <Link className="btn btn-secondary" to={`decks/${deckId}`}>Cancel</Link>
-                <button className="btn btn-primary" type="submit">Submit</button>
+                <Link className="btn btn-secondary mr-2 mt-2" to={`/decks/${deckId}`}>Cancel</Link>
+                <button className="btn btn-primary mt-2" type="submit">Submit</button>
             </form>
         </>
     )
