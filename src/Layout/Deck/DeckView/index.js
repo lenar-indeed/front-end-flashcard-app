@@ -38,7 +38,7 @@ function DeckView() {
         const linkToDeckStudy = `/decks/${deck.id}/study`;
         const linkToAddCard = `/decks/${deck.id}/cards/new`;
         const cards = deck.cards.map((card) => (
-            <div className="card">
+            <div className="card" key={`${card.id}`}>
                 <div className="card-body row">
                     <div className="col-6 card-text">{card.front}</div>
                     <div className="col-6 card-text">{card.back}</div>
