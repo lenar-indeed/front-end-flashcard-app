@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import {createCard, readDeck} from "../../../utils/api";
+import CardForm from "../CardForm";
 
 function AddCard() {
     const [deck, setDeck] = useState({name: "", description: ""});
@@ -36,14 +37,7 @@ function AddCard() {
                 </ol>
             </nav>
             <h1>{deck.name}: Add Card</h1>
-            <form onSubmit={submitHandler}>
-                <label>Front</label>
-                <textarea className="form-control mb-3" placeholder="Front side of card" name="front" onChange={changeHandler} id="front" value={card.front} />
-                <label>Back</label>
-                <textarea className="form-control" placeholder="Back side of card" name="back" onChange={changeHandler} id="back" value={card.back} />
-                <Link className="btn btn-secondary mr-2 mt-3" to={`/decks/${deckId}`}>Done</Link>
-                <button className="btn btn-primary mt-3">Save</button>
-            </form>
+            <CardForm deckId={deck.id} card={card} formChange={changeHandler} formSubmit={submitHandler} />
         </>
     )
 }
