@@ -25,6 +25,7 @@ function DeckView() {
     };
 
     const deleteCardHandler = async (event) => {
+        console.log("event.target.value: ", event.target.value);
         if (window.confirm("Delete this card? You will not be able to recover it.")) {
             await deleteCard(event.target.value);
             history.go("0");
@@ -46,9 +47,7 @@ function DeckView() {
                 </div>
                 <div className="d-flex justify-content-end">
                     <Link to={`/decks/${deck.id}/cards/${card.id}/edit`} className="btn btn-secondary mr-2 mb-2">Edit</Link>
-                    <button className="btn btn-danger mr-3 mb-2" name="deleteCard" onClick={deleteCardHandler} value={card.id}>
-                        <span className="oi oi-trash"></span>
-                    </button>
+                    <button className="btn btn-danger mr-3 mb-2 oi oi-trash" name="deleteCard" onClick={deleteCardHandler} value={card.id}/>
                     </div>
                 </div>
         ));
@@ -70,9 +69,7 @@ function DeckView() {
                                 <Link to={linkToDeckStudy} className="btn btn-primary mr-2">Study</Link>
                                 <Link to={linkToAddCard} className="btn btn-primary mr-2">Add Cards</Link>
                             </div>
-                            <button className="btn btn-danger mr-3" name="deleteDeck" onClick={deleteDeckHandler} value={deck.id}>
-                                <span className="oi oi-trash"></span>
-                            </button>
+                            <button className="btn btn-danger mr-3 oi oi-trash" name="deleteDeck" onClick={deleteDeckHandler} value={deck.id} />
                         </div>
                     </div>
                 </div>
