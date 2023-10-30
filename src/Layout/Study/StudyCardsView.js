@@ -19,6 +19,7 @@ function StudyCardsView({cards}) {
             }
         } else {
             setCardCount(parseInt(cardCount) + 1);
+            setCard(cards[cardCount]);
             setFlipped(false);
         }
     }

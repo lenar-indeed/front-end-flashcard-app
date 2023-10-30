@@ -16,8 +16,9 @@ function Study() {
             setDeck(data);
         }
         loadDeck();
+        console.log("Load deck")
         return () => abortController.abort();
-    }, [deckId]);
+    }, []);
 
     
 
