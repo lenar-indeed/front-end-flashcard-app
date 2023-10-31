@@ -12,8 +12,9 @@ function StudyCardsView({cards}) {
     const nextHandle = () => {
         if (cardCount === cards.length) {
             if (window.confirm("Restart cards? Click 'cancel' to return to the home page.")) {
+                setFlipped(false);
                 setCardCount(1); 
-                setCard(cards[0])
+                setCard(cards[0]);
             } else { 
                 history.push("/");
             }

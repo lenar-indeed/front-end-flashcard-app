@@ -16,7 +16,7 @@ function AddCard() {
         }
         loadDeck();
         return () => abortController.abort();
-    }, [deckId]);
+    }, []);
 
     const changeHandler = (event) => {
         setCard({...card, [event.target.name]: event.target.value, deckId: deckId});

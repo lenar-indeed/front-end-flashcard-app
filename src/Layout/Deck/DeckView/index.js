@@ -15,7 +15,7 @@ function DeckView() {
         }
         loadDeck();
         return () => abortController.abort();
-    }, [deckId]);
+    }, []);
 
     const deleteDeckHandler = async (event) => {
         if (window.confirm("Delete this deck? You will not be able to recover it.")) {

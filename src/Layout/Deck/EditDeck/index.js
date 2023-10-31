@@ -15,7 +15,7 @@ function EditDeck() {
         }
         loadDeck();
         return () => abortController.abort();
-    }, [deckId]);
+    }, []);
 
     const submitHandler = async (event) => {
         event.preventDefault();

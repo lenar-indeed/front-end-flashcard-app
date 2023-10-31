@@ -17,7 +17,7 @@ function EditCard() {
         }
         loadDeck();
         return () => abortController.abort();
-    }, [deckId]);
+    }, []);
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -27,7 +27,7 @@ function EditCard() {
         }
         loadCard();
         return () => abortController.abort();
-    }, [cardId]);
+    }, []);
 
     const changeHandler = (event) => {
         setCard({...card, [event.target.name]: event.target.value});
